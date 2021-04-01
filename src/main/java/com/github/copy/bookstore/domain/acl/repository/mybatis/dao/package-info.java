@@ -4,4 +4,4 @@
  * @version 1.0
  * @since 2021/2/10 20:32
  */
-package com.github.copy.bookstore.domain.repository.persistence.mybatis.dao;
+package com.github.copy.bookstore.domain.acl.repository.mybatis.dao;
