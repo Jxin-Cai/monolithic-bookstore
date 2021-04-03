@@ -1,7 +1,9 @@
 package com.github.copy.bookstore.infrastructure.web.aop;
 
-import com.github.copy.bookstore.resource.global.JaxrsRsp;
+import com.github.copy.bookstore.ohs.global.JaxrsRsp;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -9,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import java.util.stream.Collectors;
 
@@ -21,20 +22,31 @@ import java.util.stream.Collectors;
 @Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler {
-    @Context
-    private HttpServletRequest request;
 
     /**
      * 参数校验不通过的异常
      */
     @ExceptionHandler
     @ResponseBody
-    public Response handleException(ConstraintViolationException e) {
-        log.warn("校验数据不合法, msg: {}, {}: {}", e.getMessage(), request.getMethod(), request.getPathInfo());
+    public Response handleException(MethodArgumentNotValidException e, HttpServletRequest request) {
+        final String msg = e.getAllErrors()
+                            .stream()
+                            .map(ObjectError::getDefaultMessage)
+                            .collect(Collectors.joining(";"));
+        log.warn("校验数据不合法, msg: {}；请求路径: {}: {}。", msg, request.getRequestURI(), request.getMethod());
+        return JaxrsRsp.send(Response.Status.BAD_REQUEST, msg, null);
+    }
+    /**
+     * 参数校验不通过的异常
+     */
+    @ExceptionHandler
+    @ResponseBody
+    public Response handleException(ConstraintViolationException e, HttpServletRequest request) {
         final String msg = e.getConstraintViolations()
                             .stream()
                             .map(ConstraintViolation::getMessage)
                             .collect(Collectors.joining(";"));
+        log.warn("校验数据不合法, msg: {}；请求路径: {}: {}。", msg, request.getRequestURI(), request.getMethod());
         return JaxrsRsp.send(Response.Status.BAD_REQUEST, msg, null);
     }
     /**

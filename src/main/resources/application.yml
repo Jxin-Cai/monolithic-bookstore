@@ -1,4 +1,3 @@
-
 server:
   servlet:
     context-path: /restful
@@ -38,9 +37,14 @@ spring:
     username: sa
     password:
 
-
+mybatis:
+  mapper-locations: classpath:db/mapper/*.xml
+  type-aliases-package: com.github.copy.bookstore.infrastructure.acl.repository.table
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
 swagger:
-  base-package: com.github.copy.bookstore.resource.web
+  base-package: com.github.copy.bookstore.ohs.resource
   title: copy凤凰书店
   description: 凤凰书店所有资源
   version: 2.0

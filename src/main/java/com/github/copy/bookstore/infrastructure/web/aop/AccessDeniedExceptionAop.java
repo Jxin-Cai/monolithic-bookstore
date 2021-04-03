@@ -1,6 +1,6 @@
 //package com.github.copy.bookstore.infrastructure.web.aop;
 //
-//import com.github.copy.bookstore.resource.global.JaxrsRsp;
+//import com.github.copy.bookstore.ohs.global.JaxrsRsp;
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.security.access.AccessDeniedException;
 //
