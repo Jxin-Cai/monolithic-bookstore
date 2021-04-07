@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 
 /**
  * db写异常
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 8:58 下午
  */
 public class DbWriteException extends RuntimeException{

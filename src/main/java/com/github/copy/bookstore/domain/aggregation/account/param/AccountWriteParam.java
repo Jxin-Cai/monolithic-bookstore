@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * 用户 写参数
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 5:34 下午
  */
 @Data

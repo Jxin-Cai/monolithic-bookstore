@@ -1,13 +1,13 @@
-package com.github.copy.bookstore.infrastructure.acl.repository.mybatis;
+package com.github.copy.bookstore.infrastructure.acl.repository.domain.account.mybatis;
 
-import com.github.copy.bookstore.domain.acl.repository.AccountRepository;
+import com.github.copy.bookstore.domain.aggregation.account.acl.repository.AccountRepository;
 import com.github.copy.bookstore.domain.aggregation.account.entity.Account;
 import com.github.copy.bookstore.domain.aggregation.account.param.AccountReadParam;
 import com.github.copy.bookstore.domain.service.validator.account.UniqueAccount;
 import com.github.copy.bookstore.infrastructure.acl.repository.DbUtil;
-import com.github.copy.bookstore.infrastructure.acl.repository.assembler.AccountDoConv;
-import com.github.copy.bookstore.infrastructure.acl.repository.mybatis.dao.AccountDoMapper;
-import com.github.copy.bookstore.infrastructure.acl.repository.table.AccountDo;
+import com.github.copy.bookstore.infrastructure.acl.repository.domain.account.assembler.AccountDoConv;
+import com.github.copy.bookstore.infrastructure.acl.repository.domain.account.mybatis.dao.AccountDoMapper;
+import com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table.AccountDo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.validation.annotation.Validated;
@@ -17,7 +17,7 @@ import java.util.Optional;
 
 /**
  * 用户聚合仓库 mybatis实现
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 8:48 下午
  */
 @Repository

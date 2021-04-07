@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 用户工厂类
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 7:57 下午
  */
 @Component

@@ -1,12 +1,12 @@
-package com.github.copy.bookstore.infrastructure.acl.repository.assembler;
+package com.github.copy.bookstore.infrastructure.acl.repository.domain.account.assembler;
 
 import com.github.copy.bookstore.domain.aggregation.account.entity.Account;
-import com.github.copy.bookstore.infrastructure.acl.repository.table.AccountDo;
+import com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table.AccountDo;
 import org.mapstruct.Mapper;
 
 /**
  * 用户 do转换器
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 7:40 下午
  */
 @Mapper(componentModel = "spring")

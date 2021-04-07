@@ -1,10 +1,10 @@
-package com.github.copy.bookstore.infrastructure.acl.repository.table;
+package com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table;
 
 import lombok.Data;
 
 /**
  *
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 8:41 下午
  */
 @Data

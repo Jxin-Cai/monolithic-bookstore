@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.github.copy.bookstore.infrastructure.acl.repository.mybatis.dao.AccountDoMapper">
-  <resultMap id="BaseResultMap" type="com.github.copy.bookstore.infrastructure.acl.repository.table.AccountDo">
+<mapper namespace="com.github.copy.bookstore.infrastructure.acl.repository.domain.account.mybatis.dao.AccountDoMapper">
+  <resultMap id="BaseResultMap" type="com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table.AccountDo">
     <!--@mbg.generated-->
     <!--@Table account-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -29,7 +29,7 @@
     delete from account
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.github.copy.bookstore.infrastructure.acl.repository.table.AccountDo" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table.AccountDo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into account (username, "password", "name", 
       avatar, telephone, email, 
@@ -38,7 +38,7 @@
       #{avatar,jdbcType=VARCHAR}, #{telephone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
       #{location,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.github.copy.bookstore.infrastructure.acl.repository.table.AccountDo" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table.AccountDo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into account
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -88,7 +88,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.github.copy.bookstore.infrastructure.acl.repository.table.AccountDo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table.AccountDo">
     <!--@mbg.generated-->
     update account
     <set>
@@ -116,7 +116,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.github.copy.bookstore.infrastructure.acl.repository.table.AccountDo">
+  <update id="updateByPrimaryKey" parameterType="com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table.AccountDo">
     <!--@mbg.generated-->
     update account
     set username = #{username,jdbcType=VARCHAR},

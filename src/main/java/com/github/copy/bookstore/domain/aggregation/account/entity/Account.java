@@ -1,11 +1,10 @@
 package com.github.copy.bookstore.domain.aggregation.account.entity;
 
-import com.github.copy.bookstore.domain.service.validator.account.UniqueAccount;
 import lombok.Data;
 
 /**
  * 用户 实体
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 5:34 下午
  */
 @Data

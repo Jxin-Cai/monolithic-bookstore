@@ -12,7 +12,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * 用户唯一校验
- * @author 素律
+ * @author Jxin
  * @since 2021/4/2 10:32 上午
  */
 @Documented

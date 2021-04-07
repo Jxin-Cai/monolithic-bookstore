@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 /**
  * db操作的一些工具
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 9:03 下午
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -23,7 +23,7 @@ public final class DbUtil {
      * 封装了isOne的返回校验，不满足抛异常, 用于简化编码
      */
     public static void opIsOne(Supplier<Integer> supplier) {
-        op(supplier, i -> i == 1, e -> log.error(e.getMessage(), e));
+        op(supplier, i -> i == 1, e -> {});
     }
     /**
      * 校验操作
@@ -41,10 +41,11 @@ public final class DbUtil {
         try {
             final boolean test = test(supplier, predicate);
             if(!test){
-                throw new DbWriteException("写操作出现异常，执行数据行数不为1");
+                throw new DbWriteException("写操作出现异常");
             }
         } catch (Exception e) {
             exceptionConsumer.accept(e);
+            throw e;
         }
     }
 

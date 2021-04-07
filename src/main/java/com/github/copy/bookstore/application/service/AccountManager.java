@@ -6,7 +6,7 @@ import com.github.copy.bookstore.domain.aggregation.account.param.AccountWritePa
 
 /**
  * 用户管理器
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 8:04 下午
  */
 public interface AccountManager {

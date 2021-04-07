@@ -6,7 +6,7 @@ import org.mapstruct.Mapper;
 
 /**
  * 用户 聚合转换器
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 7:40 下午
  */
 @Mapper(componentModel = "spring")

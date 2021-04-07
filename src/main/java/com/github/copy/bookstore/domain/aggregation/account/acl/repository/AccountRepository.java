@@ -1,4 +1,4 @@
-package com.github.copy.bookstore.domain.acl.repository;
+package com.github.copy.bookstore.domain.aggregation.account.acl.repository;
 
 import com.github.copy.bookstore.domain.aggregation.account.entity.Account;
 import com.github.copy.bookstore.domain.aggregation.account.param.AccountReadParam;
@@ -7,7 +7,7 @@ import com.github.copy.bookstore.infrastructure.acl.repository.err.DbWriteExcept
 
 /**
  * 用户聚合仓库
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 8:45 下午
  */
 public interface AccountRepository {

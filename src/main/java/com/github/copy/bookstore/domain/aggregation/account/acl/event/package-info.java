@@ -4,4 +4,4 @@
  * @version 1.0
  * @since 2021/2/10 20:32
  */
-package com.github.copy.bookstore.domain.acl.event;
+package com.github.copy.bookstore.domain.aggregation.account.acl.event;

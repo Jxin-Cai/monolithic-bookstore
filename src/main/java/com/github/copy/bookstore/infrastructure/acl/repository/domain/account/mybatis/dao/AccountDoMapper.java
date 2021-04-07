@@ -1,12 +1,12 @@
-package com.github.copy.bookstore.infrastructure.acl.repository.mybatis.dao;
+package com.github.copy.bookstore.infrastructure.acl.repository.domain.account.mybatis.dao;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
-import com.github.copy.bookstore.infrastructure.acl.repository.table.AccountDo;
+import com.github.copy.bookstore.infrastructure.acl.repository.domain.account.table.AccountDo;
 
 /**
  *
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 8:41 下午
  */
 public interface AccountDoMapper {

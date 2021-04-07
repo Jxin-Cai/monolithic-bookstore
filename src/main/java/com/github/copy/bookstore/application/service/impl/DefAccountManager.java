@@ -1,7 +1,7 @@
 package com.github.copy.bookstore.application.service.impl;
 
 import com.github.copy.bookstore.application.service.AccountManager;
-import com.github.copy.bookstore.domain.acl.repository.AccountRepository;
+import com.github.copy.bookstore.domain.aggregation.account.acl.repository.AccountRepository;
 import com.github.copy.bookstore.domain.aggregation.account.entity.Account;
 import com.github.copy.bookstore.domain.aggregation.account.factory.AccountFactory;
 import com.github.copy.bookstore.domain.aggregation.account.param.AccountReadParam;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 默认的管理器实现
- * @author 素律
+ * @author Jxin
  * @since 2021/4/1 8:22 下午
  */
 @Component
